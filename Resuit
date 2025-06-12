@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<title>ผลการทำแบบทดสอบ</title>
+<style>
+  body {
+    font-family: sans-serif;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffe6f0; /* สีชมพูอ่อน */
+    text-align: center;
+    color: #333;
+  }
+  h1 {
+    color: red;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  #score {
+    font-weight: bold;
+    font-size: 24px;
+    color: green;
+    margin-bottom: 50px;
+  }
+  #message {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: auto;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+
+<h1>สุขสันต์วันครบรอบนะคะคนสวย</h1>
+<p id="score"></p>
+
+<div id="message">
+  <p>เค้าดีใจที่ได้เจอเธอนะคะ</p>
+  <p>เค้าอยากอยู่กับเธอไปนานๆ</p>
+  <p>อยากโตไปกับเธอ</p>
+  <p>อยากเห็นเธอเข้ามหาลัย</p>
+  <p>อยากมีเธอไปจนแก่เลย</p>
+  <p>เค้ารักเธอนะคะ 💖</p>
+</div>
+
+<script>
+  // คำตอบที่ถูกต้อง
+  const correctAnswers = {
+    q1: "c",
+    q2: "b",
+    q3: "d",
+    q4: "a",
+    q5: "all"
+  };
+
+  function getQueryParams() {
+    const params = {};
+    location.search.substring(1).split("&").forEach(pair => {
+      const [key, value] = pair.split("=");
+      params[key] = decodeURIComponent(value || "");
+    });
+    return params;
+  }
+
+  const userAnswers = getQueryParams();
+  let score = 0;
+  const total = Object.keys(correctAnswers).length;
+
+  for (const q in correctAnswers) {
+    const ans = userAnswers[q];
+    if (!ans) continue;
+    if (correctAnswers[q] === "all") {
+      score++;
+    } else if (ans === correctAnswers[q]) {
+      score++;
+    }
+  }
+
+  document.getElementById("score").textContent = `คุณได้คะแนน ${score} / ${total}`;
+</script>
+
+</body>
+</html>
