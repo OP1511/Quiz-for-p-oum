@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<title>แบบทดสอบ 5 ข้อ</title>
+<style>
+  body {
+    font-family: sans-serif;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffe6f0;
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .question > p {
+    text-transform: uppercase;
+    color: red;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<h1>แบบทดสอบความรู้ทั่วไป 5 ข้อ</h1>
+
+<form action="result.html" method="get">
+
+  <div class="question">
+    <p>1. วันครบรอบของเราคือวันที่เท่าไหร่?</p>
+    <label><input type="radio" name="q1" value="a" /> 13</label><br />
+    <label><input type="radio" name="q1" value="b" /> 14</label><br />
+    <label><input type="radio" name="q1" value="c" /> 15</label><br />
+    <label><input type="radio" name="q1" value="d" /> 16</label>
+  </div>
+
+  <div class="question">
+    <p>2. เราเจอกันในเกมอะไร?</p>
+    <label><input type="radio" name="q2" value="a" /> ROV</label><br />
+    <label><input type="radio" name="q2" value="b" /> FREEFIRE</label><br />
+    <label><input type="radio" name="q2" value="c" /> Discord</label><br />
+    <label><input type="radio" name="q2" value="d" /> Tinder</label>
+  </div>
+
+  <div class="question">
+    <p>3. ปีโป้เกิดวันอะไร?</p>
+    <label><input type="radio" name="q3" value="a" /> วันจันทร์</label><br />
+    <label><input type="radio" name="q3" value="b" /> วันอังคาร</label><br />
+    <label><input type="radio" name="q3" value="c" /> วันอาทิตย์</label><br />
+    <label><input type="radio" name="q3" value="d" /> วันศุกร์</label>
+  </div>
+
+  <div class="question">
+    <p>4. ปีโป้ชอบกินน้ำอะไรมากที่สุด?</p>
+    <label><input type="radio" name="q4" value="a" /> ชานมไข่มุก</label><br />
+    <label><input type="radio" name="q4" value="b" /> โคล่า</label><br />
+    <label><input type="radio" name="q4" value="c" /> น้ำเปล่า</label><br />
+    <label><input type="radio" name="q4" value="d" /> ผลไม้</label>
+  </div>
+
+  <div class="question">
+    <p>5. ปีโป้รักอุ้มมั้ย?</p>
+    <label><input type="radio" name="q5" value="a" /> รักมากกก</label><br />
+    <label><input type="radio" name="q5" value="b" /> รักมากที่สุด</label><br />
+    <label><input type="radio" name="q5" value="c" /> รักพี่อุ้ม</label><br />
+    <label><input type="radio" name="q5" value="d" /> รักมากเลยค่ะ</label>
+  </div>
+
+  <button type="submit">ตรวจคำตอบ</button>
+</form>
+
+</body>
+</html>
